@@ -1,8 +1,8 @@
 <?php
-   include("php_includes/config.php");
+   //include("php_includes/config.php");
    session_start();
 
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
+   //if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form
 
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
@@ -25,7 +25,7 @@
       }else {
          $error = "Your Login Name or Password is invalid";
       }
-   }
+   //}
 ?>
 
 <html>
