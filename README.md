@@ -1,6 +1,6 @@
-# Smart-Refrigerator
+# Foobox 
 CSI2132 Final Project
 
-UI - Judah
-Back End - Stephanie, Meina
-Both - Wes
+UI - Judah<br>
+Back End - Stephanie, Meina<br>
+Both - Wes<br>
