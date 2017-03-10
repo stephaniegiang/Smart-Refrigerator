@@ -1,15 +1,15 @@
 <?php
-$host="localhost";
-$user="root";
-$password="";
-$con=mysqli_connect($host,$user,$password,"test");
+$host="web0.site.uottawa.ca:15432";
+$user="sgian032";
+$password="rvwf78rvwf78@23";
+$con=mysqli_connect($host,$user,$password,"foobox");
 if($con){
-	$sql = "SELECT * FROM users";
+	$sql = "SELECT * FROM User_Account";
 	$result = mysqli_query($con,$sql);
 
 	if(mysqli_num_rows($result) > 0){
 		while($row = mysqli_fetch_assoc($result)){
-			echo "username: ".$row["USERNAME"].", password: ".$row["PASSWORD"].", type: ".$row["TYPE"]."<br>";
+			echo "username: ".$row["password"].", password: ".$row["password"].", type: ".$row["category"]."<br>";
 		}
 	}
 	else{
