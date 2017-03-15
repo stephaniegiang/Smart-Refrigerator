@@ -8,8 +8,7 @@
       $result =pg_query($dbconn4, 
                       "set search_path = 'foobox';
                       select username,password 
-                      from user_account 
-                      where username= '$username' and password = '$password';
+                      from user_account;
                       ");
        $myusename = pg_fetch_row($result);
        echo "ROW IS :$myusename[0]";
