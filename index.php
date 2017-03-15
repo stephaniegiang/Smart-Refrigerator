@@ -98,9 +98,9 @@
                       </div>
                       <div class="form-group">
                         <select class ="form-control" name="role" id="role" tabindex="5">
-                          <option value = "customer">Customer</option>
-                          <option value = "chef">Chef</option>
-                          <option value = "admin">Admin</option>
+                          <option selected value="customer">Customer</option>
+                          <option value="chef">Chef</option>
+                          <option value="admin">Admin</option>
                         </select>
                       </div>
                       <div class="form-group">
