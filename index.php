@@ -7,12 +7,12 @@
     if($con){
       $result =pg_query($dbconn4, 
                       "set search_path = 'foobox';
-                      select username,password 
+                      select *
                       from user_account;
                       ");
-       $myusename = pg_fetch_row($result);
-       echo "ROW IS :$myusename[0]";
-       echo " Column is: $myusename[1]";
+       $my = pg_fetch_row($result);
+       echo "ROW IS: $my[0]";
+       echo " Column is: $my[1]";
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
     if($count == 1){
