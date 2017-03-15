@@ -5,11 +5,10 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
     if($con){
-      $result =pg_query($dbconn4, 
-                      "set search_path = 'As'; select message from test;
-                      ");
+      $result =pg_query($dbconn4,"set search_path = 'As'; select message from test;");
        $my = pg_fetch_row($result);
        echo print_r($my);
+       echo $my[0];
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
     if($count == 1){
