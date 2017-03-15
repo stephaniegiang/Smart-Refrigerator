@@ -83,18 +83,21 @@
                         </div>
                       </div>
                     </form>
-                    <form id="register-form" action="" method="post" role="form" style="display: none;">
+                    <form id="register-form" action="register.php" method="post" role="form" style="display: none;">
                       <div class="form-group">
-                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                        <input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
                       </div>
                       <div class="form-group">
-                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                        <input type="text" name="username" id="username" tabindex="2" class="form-control" placeholder="Username" value="">
                       </div>
                       <div class="form-group">
-                        <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                        <input type="password" name="password" id="password" tabindex="3" class="form-control" placeholder="Password">
                       </div>
                       <div class="form-group">
-                        <select class ="form-control">
+                        <input type="password" name="confirm-password" id="confirm-password" tabindex="4" class="form-control" placeholder="Confirm Password">
+                      </div>
+                      <div class="form-group">
+                        <select class ="form-control" name="role" id="role" tabindex="5">
                           <option value = "customer">Customer</option>
                           <option value = "chef">Chef</option>
                           <option value = "admin">Admin</option>
@@ -103,7 +106,7 @@
                       <div class="form-group">
                         <div class="row">
                           <div class="col-sm-6 col-sm-offset-3">
-                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                            <input type="submit" name="register-submit" id="register-submit" tabindex="6" class="form-control btn btn-register" value="Register Now">
                           </div>
                         </div>
                       </div>
