@@ -11,8 +11,7 @@
                       from user_account;
                       ");
        $my = pg_fetch_row($result);
-       echo "ROW IS: $my[0]";
-       echo " Column is: $my[1]";
+       echo print_r($my);
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
     if($count == 1){
