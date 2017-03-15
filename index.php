@@ -1,14 +1,13 @@
 <?php
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      echo "Submit PREssed";
+    echo "Submit PREssed";
     $con_string = "host=web0.site.uottawa.ca port=15432 dbname=sgian032 user=sgian032 password=***REMOVED***";
     $con = pg_connect($con_string);
     $username = $_POST["username"];
     $password = $_POST["password"];
-
+      echo $con;
     if($con){
-       echo $con;
-    $result =pg_query($dbconn4, 
+      $result =pg_query($dbconn4, 
                       "set search_path = 'foobox';
                       select username,password 
                       from user_account 
