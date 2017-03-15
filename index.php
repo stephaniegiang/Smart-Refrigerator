@@ -1,17 +1,19 @@
 <?php
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $host="localhost";
-    $user="root";
-    $password="";
-    $con=mysqli_connect($host,$user,$password,"test");
+    $con_string = "host=web0.site.uottawa.ca port=15432 dbname=sgian032 user=sgian032 password=***REMOVED***";
+    $con = pg_connect($con_string);
     $username = $_POST["username"];
     $password = $_POST["password"];
 
     if($con){
-    $sql = "SELECT USERNAME, TYPE FROM USERS WHERE USERNAME = '$username' AND PASSWORD = '$password'";
-    $result = mysqli_query($con,$sql);
-    $count = mysqli_num_rows($result);
-    $row = mysqli_fetch_assoc($result);
+    $result =pg_query($dbconn4, 
+                      "set search_path = 'foobox;
+                      select username,password 
+                      from user_account 
+                      where username= '$username' and password = '$password';
+                      ");
+    $count = pg_num_rows($result);
+    $row = pg_fetch_assoc($result);
     if($count == 1){
       //session_register($username);
       //$_SESSION['login_user'] = $username;
