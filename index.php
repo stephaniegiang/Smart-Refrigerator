@@ -1,22 +1,22 @@
 <?php
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $con_string = "host=web0.site.uottawa.ca port=15432 dbname=jolot104 user=jolot104 password=Projudah1064!";
-    $con = pg_connect($con_string);
+    $con = "host=web0.site.uottawa.ca port=15432 dbname=sgian032 user=sgian032 password=rvwf78rvwf78@23";
+    $dbconn4 = pg_connect($con);
     $username = $_POST["username"];
     $password = $_POST["password"];
     if($con){
-      $result =pg_query($dbconn4,"set search_path = 'As'; select message from test;");
+      $result =pg_query($dbconn4,"set search_path = 'foobox'; select username,password,category from user_account where username='$username' and password = '$password';");
        $my = pg_fetch_row($result);
-       echo print_r($my);
-       echo $my[0];
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
     if($count == 1){
       //session_register($username);
       //$_SESSION['login_user'] = $username;
-      echo "Welcome ".$row["USERNAME"].", you are authorized as: ".$row["TYPE"];
+      echo "Welcome ".$my[0].", you are authorized as: ".$my[2];
+      $url = "http://foobox.herokuapp.com/customer/customer.php";
+      header("Location: $url");
     }else {
-            $error = "Your Login Name or Password is invalid";
+            echo "Your Login Name or Password is invalid";
           }
      }
   }
