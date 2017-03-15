@@ -6,9 +6,7 @@
     $password = $_POST["password"];
     if($con){
       $result =pg_query($dbconn4, 
-                      "set search_path = 'foobox';
-                      select *
-                      from user_account;
+                      "set search_path = 'foobox'; select * from user_account;
                       ");
        $my = pg_fetch_row($result);
        echo print_r($my);
