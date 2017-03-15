@@ -1,4 +1,5 @@
 <?php
+   echo "TEST ECHO";
    if($_SERVER["REQUEST_METHOD"] == "POST") {
     $con_string = "host=web0.site.uottawa.ca port=15432 dbname=sgian032 user=sgian032 password=rvwf78rvwf78@23";
     $con = pg_connect($con_string);
