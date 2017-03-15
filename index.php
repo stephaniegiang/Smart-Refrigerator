@@ -1,11 +1,9 @@
 <?php
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Submit PREssed";
     $con_string = "host=web0.site.uottawa.ca port=15432 dbname=sgian032 user=sgian032 password=rvwf78rvwf78@23";
     $con = pg_connect($con_string);
     $username = $_POST["username"];
     $password = $_POST["password"];
-      echo $con;
     if($con){
       $result =pg_query($dbconn4, 
                       "set search_path = 'foobox';
@@ -18,7 +16,6 @@
        echo " Column is: $myusename[1]";
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
-       echo $username;
     if($count == 1){
       //session_register($username);
       //$_SESSION['login_user'] = $username;
