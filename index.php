@@ -15,6 +15,7 @@
                       ");
        $myusename = pg_fetch_row($result);
        echo "ROW IS :$myusename[0]";
+       echo " Column is: $myusename[1]";
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
        echo $username;
