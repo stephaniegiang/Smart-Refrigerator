@@ -7,12 +7,15 @@
     $password = $_POST["password"];
 
     if($con){
+       echo $con;
     $result =pg_query($dbconn4, 
                       "set search_path = 'foobox';
                       select username,password 
                       from user_account 
                       where username= '$username' and password = '$password';
                       ");
+       $myusename = pg_fetch_row($result);
+       echo "ROW IS :$myusename[0]";
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
        echo $username;
