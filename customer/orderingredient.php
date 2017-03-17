@@ -16,7 +16,7 @@
         </select>
 
         <br />
-        <div style="margin:auto; width:28.7%;" class="btn-group" role="group">
+        <div style="margin:0 auto; text-align:center;" class="btn-group" role="group">
           <button onclick="populateOnce('sbOne','sbTwo')"type="button" class="btn btn-default" id="left" value="<">></button>
           <button type="button" class="btn btn-default" id="left" value="<">>></button>
           <button onclick="populateOnce('sbTwo','sbOne')"type="button" class="btn btn-default" id="left" value="<"><</button>
