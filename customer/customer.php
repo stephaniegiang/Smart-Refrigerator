@@ -17,7 +17,7 @@
     	$page = $_GET['page'];
     ?>
     <div class="container" style="margin-top:-20px;">
-        <div class="row"style="background-color:#F2F2F2;">
+        <div class="row">
                 <div class="col-lg-3 col-sm-3 sidebar" style="">
                    <!--<h3>Investors</h3>-->
 
