@@ -1,12 +1,4 @@
 <?php
-    $dbhost = $_SERVER['localhost'];
-    $dbport = $_SERVER['3306'];
-    $dbname = $_SERVER['test'];
-    $charset = 'utf8' ;
-
-    $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-    $username = $_SERVER['root'];
-    $password = $_SERVER[''];
-
-    $pdo = new PDO($dsn, $username, $password);
+	$con = "host=web0.site.uottawa.ca port=15432 dbname=sgian032 user=sgian032 password=***REMOVED***";
+    $dbconn4 = pg_connect($con);
 ?>
