@@ -13,7 +13,7 @@
       //session_register($username);
       //$_SESSION['login_user'] = $username;
       echo "Welcome ".$my[0].", you are authorized as: ".$my[2];
-      $url = "http://foobox.herokuapp.com/customer/customer.php";
+      $url = "customer/customer.php?page=meal";
       header("Location: $url");
     }else {
             echo "Your Login Name or Password is invalid";
