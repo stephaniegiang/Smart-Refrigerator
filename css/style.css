@@ -1,12 +1,21 @@
 body{
   background-color:#2E6171;
+  background: url("../fr.jpg");
 }
-
-
+.row{
+	
+	background: rgba(255,255,255,1);
+	opacity: 0.8;
+}
 li .active{
    background-color:#9FD8CB;
 }
-
 #help{
   color:#BC8282;
+}
+.op{
+	padding: 10px 5px;
+	margin-top: 5px;
+	background: rgb(200,200,255);
+	border-radius: 5px;
 }
