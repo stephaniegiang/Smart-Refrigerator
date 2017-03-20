@@ -1,7 +1,10 @@
 <?php
+    $url = "customer/customer.php/?page=meal";
+	if(isset($_SESSION['login_user'])){
+		header($url);
+	}
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $con = "host=web0.site.uottawa.ca port=15432 dbname=sgian032 user=sgian032 password=***REMOVED***";
-    $dbconn4 = pg_connect($con);
+	include("php_includes/config.php");
     $username = $_POST["username"];
     $password = $_POST["password"];
     if($con){
@@ -10,10 +13,17 @@
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
     if($count == 1){
+    	session_start();
+    	include('php_includes/session.php');
       //session_register($username);
       //$_SESSION['login_user'] = $username;
       echo "Welcome ".$my[0].", you are authorized as: ".$my[2];
+<<<<<<< HEAD
       $url = "customer/customer.php?page=meal";
+=======
+
+	  $_SESSION['login_user']=$username;
+>>>>>>> 4a774a3548795e464cfbfcfdb6a23d1d78f3efaf
       header("Location: $url");
     }else {
             echo "Your Login Name or Password is invalid";
