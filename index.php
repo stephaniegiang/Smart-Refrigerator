@@ -18,12 +18,10 @@
       //session_register($username);
       //$_SESSION['login_user'] = $username;
       echo "Welcome ".$my[0].", you are authorized as: ".$my[2];
-<<<<<<< HEAD
       $url = "customer/customer.php?page=meal";
-=======
 
 	  $_SESSION['login_user']=$username;
->>>>>>> 4a774a3548795e464cfbfcfdb6a23d1d78f3efaf
+
       header("Location: $url");
     }else {
             echo "Your Login Name or Password is invalid";
