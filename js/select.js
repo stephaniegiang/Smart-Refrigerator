@@ -4,3 +4,7 @@ function populateOnce(sbOne,sbTwo){
 	var i = sbOne.selectedIndex;
 	sbTwo.add(sbOne.options[i]);
 }
+
+function geting(){
+	
+}
