@@ -5,11 +5,9 @@ function populateOnce(sO,sT){
 	sbTwo.add(sbOne.options[i]);
 }
 
-<<<<<<< HEAD
 function geting(){
 	
 }
-=======
 function populateAll(sO,sT){
 	
 	var sbOne = document.getElementById(sO);
@@ -19,4 +17,4 @@ function populateAll(sO,sT){
 	
 	
 }
->>>>>>> 4a774a3548795e464cfbfcfdb6a23d1d78f3efaf
+
