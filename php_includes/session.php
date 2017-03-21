@@ -1,5 +1,5 @@
 <?php
-	//db name: $dbconn4 idk why its named that
+	/*//db name: $dbconn4 idk why its named that
    	include('config.php');
 	  if (!isset($_SESSION['login_user']))
 	   {
@@ -14,11 +14,6 @@
 		pg_close($dbconn4);
 		header('../index.php');
 	}
-
-
-
-
-
 /*
    $user_check = $_SESSION['login_user'];
 
