@@ -3,16 +3,17 @@
     <div style="margin-top:50px;margin-bottom:100px;">
     	<h2> Select your ingredients</h2>
         <select style="width:45%; min-height:50%;" id="sbOne" multiple="multiple">
-            <option class="op" value="1">Option 1</option>
-            <option class="op" value="2">Option 2</option>
-            <option class="op" value="3">Option 4</option>
-            <option class="op" value="4">Option 6</option>
-            <option class="op" value="5">Option 7</option>
+          <?php
+            require('../connect.php');
+            $setPath = pg_query("Set search_path='foobox';");
+            $getIngredients = pg_query("Select * from Ingredient;");
+            while($row = pg_fetch_array($getIngredients)){
+              echo '<option class="op" value="'.$row["id"]. '"">' .$row["name"].'</option>';
+            }
+          ?>
         </select>
 
         <select style="width:45%; min-height:50%;" id="sbTwo" multiple="multiple">
-            <option class="op" value="6">Option 3</option>
-            <option class="op" value="7">Option 5</option>
         </select>
 
         <br />
