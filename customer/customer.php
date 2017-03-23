@@ -35,6 +35,8 @@
                 		include('ordermeal.php');
 					elseif(($page ==='ingredients'))
 						include('orderingredient.php');
+					elseif(($page ==='orders'))
+						include('orders.php');
                 ?>
               </div>
           </div>
