@@ -5,9 +5,6 @@ function populateOnce(sO,sT){
 	sbTwo.add(sbOne.options[i]);
 }
 
-function geting(){
-	
-}
 function populateAll(sO,sT){
 	
 	var sbOne = document.getElementById(sO);
@@ -16,5 +13,10 @@ function populateAll(sO,sT){
 	sbTwo.add(sbOne.options[i]);		
 	
 	
+}
+
+function removeElement(){
+	var sb = document.getElementById("sbOne");
+	sbOne.remove(sbOne.selectedIndex);
 }
 
