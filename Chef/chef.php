@@ -27,19 +27,19 @@
                       <li <?php if ($_GET['page'] === 'ingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=ingredients">ADD INGREDIENTS</a></li>
                       <li <?php if ($_GET['page'] === 'queue') echo 'class="active"';?>id=""><a onclick="" href="?page=queue">VIEW QUEUE</a></li>
                       <li <?php if ($_GET['page'] === 'report') echo 'class="active"';?>id=""><a onclick="" href="?page=report">MEALS REPORT</a></li>
-                      <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href-"customer.php/?page=help">HELP</a></li>
+                      <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href="customer.php/?page=help">HELP</a></li>
                    </ul>
                 </div>
                 <!-- end of sidebar thing-->
                 <div class="col-lg-9 col-sm-9 main"
                   <?php if (($page)=== 'meal')
                   		    include('addmeal.php');
-					              /*elseif(($page ==='ingredients'))
-  						            include('addingredient.php');
+					    elseif(($page ==='ingredients'))
+  						    include('../ingredients/addingredients.php');
                         elseif(($page ==='queue'))
                           include('viewqueue.php');
                         elseif(($page ==='report'))
-                          include('report.php');*/
+                          include('report.php');
                   ?>
               </div>
           </div>
