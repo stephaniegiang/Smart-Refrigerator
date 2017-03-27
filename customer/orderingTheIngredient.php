@@ -4,9 +4,6 @@
 	//log into database
 	require('../connect.php');
 	$query = pg_query("set search_path='foobox';");
-	//$test = pg_fetch_row($query);
-	//query = $query+0;
-	//echo "the count: " .$test[0]. ".";
 
 	//Get the current number of ingredients in database
 	$getAllOrders = pg_query("SELECT * FROM history;");
@@ -16,9 +13,6 @@
 		//grab current number and name ingredient
 		$ingredientsLeft = pg_fetch_row(pg_query("Select count from Ingredient where ID=$primaryKey;"));
 		$ingredientsLeft = $ingredientsLeft[0]+0;
-		//echo "Select count from Ingredient where ID=$primaryKey;";
-		//echo "Key: " .$primaryKey. "<---->";
-		//echo "Ingredients before: " .$ingredientsLeft. "<---->";
 		$nameOfIngredient = pg_fetch_row(pg_query("Select name from Ingredient where ID=$primaryKey;"));
 		$nameOfIngredient = $nameOfIngredient[0];
 		//Check the fridge to make sure that there is enough of the ingredient in the fridge
