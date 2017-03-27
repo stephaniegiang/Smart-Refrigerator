@@ -15,12 +15,13 @@
     if($count == 1){
     	session_start();
     	include('php_includes/session.php');
-      //session_register($username);
-      //$_SESSION['login_user'] = $username;
+      session_register($username);
       echo "Welcome ".$my[0].", you are authorized as: ".$my[2];
       $url = "customer/customer.php?page=meal";
 
-	  $_SESSION['login_user']=$username;
+	$_SESSION['login_user']=$username;
+	$_SESSION['login_type']= $my[2];
+	$_SESSION['login_name']= $my[0];
 
       header("Location: $url");
     }else {
