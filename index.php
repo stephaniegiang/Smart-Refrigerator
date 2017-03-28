@@ -3,26 +3,23 @@
 	if(isset($_SESSION['login_user'])){
 		header($url);
 	}
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
+  if($_SERVER["REQUEST_METHOD"] == "POST") {
 	include("php_includes/config.php");
     $username = $_POST["username"];
     $password = $_POST["password"];
     if($con){
-      $result =pg_query($dbconn4,"set search_path = 'foobox'; select username,password,category from user_account where username='$username' and password = '$password';");
+      $result =pg_query("set search_path = 'foobox'; select name,username,password,category from user_account where username='$username' and password = '$password';");
        $my = pg_fetch_row($result);
     $count = pg_num_rows($result);
     $row = pg_fetch_assoc($result);
     if($count == 1){
-    	session_start();
+      unset($_SESSION);
     	include('php_includes/session.php');
-      session_register($username);
-      echo "Welcome ".$my[0].", you are authorized as: ".$my[2];
+      $_SESSION["username"]=$username;
+      $_SESSION["category"]=$my[3];
+      $_SESSION["name"]=$my[0];
+
       $url = "customer/customer.php?page=meal";
-
-	$_SESSION['login_user']=$username;
-	$_SESSION['login_type']= $my[2];
-	$_SESSION['login_name']= $my[0];
-
       header("Location: $url");
     }else {
             echo "Your Login Name or Password is invalid";
