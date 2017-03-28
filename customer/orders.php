@@ -23,20 +23,22 @@
             ?>
         </ul>
         <h2>Completed Orders</h2>
-        <?php
-            //connect to the database
-            require('../connect.php');
-            $setPath = pg_query("Set search_path='foobox';");
-            //Grab all the completed orders of the user
-            $userID = $_SESSION['login_user'];
-            $getMeals = pg_query("Select mealsid, ordernumber from queue where completed=true and userid='$userID';");
-            //go through all the orders
-            while($row = pg_fetch_array($getMeals)){
-                //grab the name of the meal
-                $nameOfMeal = pg_fetch_array(pg_query("select name from meals where id=$row[0];"));
-                $nameOfMeal = $nameOfMeal[0];
-                //display the name of meal as well as order number
-                echo "<li>".$nameOfMeal." (Order #" .$row[1]. ")</li>";
-            }
-        ?>
+        <ul>
+            <?php
+                //connect to the database
+                require('../connect.php');
+                $setPath = pg_query("Set search_path='foobox';");
+                //Grab all the completed orders of the user
+                $userID = $_SESSION['login_user'];
+                $getMeals = pg_query("Select mealsid, ordernumber from queue where completed=true and userid='$userID';");
+                //go through all the orders
+                while($row = pg_fetch_array($getMeals)){
+                    //grab the name of the meal
+                    $nameOfMeal = pg_fetch_array(pg_query("select name from meals where id=$row[0];"));
+                    $nameOfMeal = $nameOfMeal[0];
+                    //display the name of meal as well as order number
+                    echo "<li>".$nameOfMeal." (Order #" .$row[1]. ")</li>";
+                }
+            ?>
+        </ul>
 </html>        
