@@ -12,10 +12,10 @@
   </head>
 
   <body>
-    <?php
-        session_start();
-    	include('../php_includes/header.php');
-    	$page = $_GET['page'];
+    <?php 
+      include('../php_includes/header.php');
+  //include('../php_includes/session.php');
+      $page = $_GET['page'];
     ?>
     <div class="container" style="margin-top:-20px;">
         <div class="row">
@@ -33,9 +33,9 @@
                 <!-- end of sidebar thing-->
                 <div class="col-lg-9 col-sm-9 main"
                   <?php if (($page)=== 'meal')
-                  		    include('addmeal.php');
-					    elseif(($page ==='ingredients'))
-  						    include('../ingredients/addingredients.php');
+                          include('addmeal.php');
+              elseif(($page ==='ingredients'))
+                  include('../ingredients/addingredients.php');
                         elseif(($page ==='queue'))
                           include('viewqueue.php');
                         elseif(($page ==='report'))
