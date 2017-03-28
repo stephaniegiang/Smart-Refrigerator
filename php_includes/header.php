@@ -1,6 +1,6 @@
 <?php 
 	include('config.php');
-	//include('session.php');
+	include('session.php');
 ?>
 <html>
   <head>
@@ -12,7 +12,7 @@
     <nav role="navigation" class="navbar navbar-default" style="color:#CACFD6;">
         <div class="container">
             <div class="navbar-header">
-                <p class="navbar-brand"> Hi ?></p>
+                <p class="navbar-brand"> <?php echo $_SESSION["one"] ?></p>
             </div>
 
             <ul class="nav navbar-nav navbar-right">
