@@ -26,4 +26,6 @@
    if(!isset($_SESSION['login_user'])){
       header("location:login.php");
    }*/
+	session_start();
+$_SESSION["one"]="oneworks";
 ?>
