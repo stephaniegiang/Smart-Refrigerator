@@ -13,13 +13,15 @@
        //If a connection happens
        if($con){
            //check to see if the username and password is valid
-           $result =pg_query("set search_path = 'foobox'; select name, category from user_account where username='$username' and password = '$password';");
+           $result =pg_query(
+            "set search_path = 'foobox'; select name,category,username,password from user_account where username='$username' and password = '$password';");
            $my = pg_fetch_row($result);
            $count = pg_num_rows($result);
            $row = pg_fetch_assoc($result);
-           if($count == 1)
+           if($username == $my[2]){
                //Start session
-               session_start();
+               unset($_SESSION);
+               include("php_includes/session.php");
                echo "Welcome ".$my[0].", you are authorized as: ".$my[1];
                //Save the login information to session
                $_SESSION['login_user']=$username;
@@ -38,6 +40,7 @@
            echo "Your Login Name or Password is invalid";
        }
    }
+ }
 ?>
 
 <html>
