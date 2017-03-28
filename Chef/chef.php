@@ -35,7 +35,7 @@
                   <?php if (($page)=== 'meal')
                           include('addmeal.php');
               elseif(($page ==='ingredients'))
-                  include('../ingredients/addingredients.php');
+                  include('../ingredients/addIngredients.php');
                         elseif(($page ==='queue'))
                           include('viewqueue.php');
                         elseif(($page ==='report'))
