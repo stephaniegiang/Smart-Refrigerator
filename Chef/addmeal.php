@@ -3,7 +3,7 @@
 <div style="margin-top:50px;margin-bottom:100px;">
  <h2>Enter meal details</h2>
  <form action="submitmeal.php" method="Post">
-  <div style="width: 45%; background-color: white;">
+  <div class="col-md-5" style="width: 45%; background-color: white;">
     <label for="Mealname">Name</label>
     <input type="text" name="mealname" required="required" id="mealname" tabindex="1" class="form-control" placeholder="Meal Name" value="">
     <br/>
@@ -13,10 +13,14 @@
     <label for="Price">Price</label>
     $<input type="number" name="price" required="required" id="price" tabindex="1" class="form-control" placeholder="$" value=""> <br/>
   </div>
+  <div class="col-md-5" style="background-color: black; height: 45%; width: 45%;">
+    
+  </div>
   <div>
     <h1>Select your ingredients</h1>
-    <div class="col-md-5">
-      <select  style="width:100%;min-height:50%;" id="sbOne" multiple="multiple">
+    <div style="width: 45%; position: relative;" >
+      <label for="ing">Ingredient</label>
+      <select class="form-control" id="ing" name="ing">
         <?php
         require('../connect.php');
         $setPath = pg_query("Set search_path='foobox';");
@@ -26,15 +30,13 @@
         }
         ?>
       </select>
-      <button style="width:100%;" onclick="populateOnce('sbOne','sbTwo')"type="button" class="btn btn-default" id="left" value="<">Select Meal</button>
-    </div>
-    <div class="col-md-5">
-      <select name="sbTwo" style="width:100%;min-height:50%;" id="sbTwo" multiple="multiple">
-      </select>
-      <button style="width:100%;"onclick="populateOnce('sbTwo','sbOne')"type="button" class="btn btn-default" id="left" value="<">Remove Selected</button>
+
+    <label for="amount">Amount</label>
+    <input type="text" name="amount" required="required" id="amount" tabindex="1" class="form-control" placeholder="1,2,3.." value="">
+    <button type= class="btn btn-primary" style="position: absolute; right: 0px; margin-top: 10px; border-radius: 30px;">+</button>
     </div>
   </div>
-  <button type ="submit" class="btn btn-primary" style="width: 25%; margin-top: 10px; ">Add</button>
+  <button type ="submit" class="btn btn-primary" style="width: 25%; margin-top: 50px; ">Add Meal</button>
 </form>
 </div>
 
