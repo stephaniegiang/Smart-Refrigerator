@@ -1,6 +1,6 @@
 <?php 
 	include('config.php');
-	//session_start();
+	include('session.php');
 ?>
 <html>
   <head>
