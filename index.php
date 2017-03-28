@@ -1,5 +1,5 @@
 <?php
-    $url = "customer/customer.php/?page=meal";
+    $url = "customer/customer.php?page=meal";
 	if(isset($_SESSION['login_user'])){
 		header($url);
 	}
@@ -19,7 +19,15 @@
       $_SESSION["category"]=$my[3];
       $_SESSION["name"]=$my[0];
 
-      $url = "customer/customer.php?page=meal";
+       if($my[3] == "user"){
+            $url="customer/customer.php?page=meal";
+        }
+        if($my[3] == "chef"){
+            $url="Chef/Chef.php?page=meal";
+        }
+        if($my[3] == "admin"){
+            $url="customer/customer.php?page=meal";
+        } 
       header("Location: $url");
     }else {
             echo "Your Login Name or Password is invalid";
