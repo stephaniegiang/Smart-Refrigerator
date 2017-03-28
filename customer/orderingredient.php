@@ -7,7 +7,7 @@
           <?php
             require('../connect.php');
             $setPath = pg_query("Set search_path='foobox';");
-            $getIngredients = pg_query("Select * from Ingredient;");
+            $getIngredients = pg_query("Select * from Ingredient where active =true;");
             while($row = pg_fetch_array($getIngredients)){
               echo '<option class="op" value="'.$row["id"]. '"">' .$row["name"].'</option>';
             }
