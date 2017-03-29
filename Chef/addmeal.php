@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../css/style.css">
 <div style="margin-top:50px;margin-bottom:100px;">
  <h2>Enter meal details</h2>
- <form action="submitmeal.php" method="Post">
+ <form action="submitmeal.php" method="post">
   <div class="col-md-5" style="width: 45%; background-color: white;">
     <label for="Mealname">Name</label>
     <input type="text" name="mealname" required="required" id="mealname" tabindex="1" class="form-control" placeholder="Meal Name" value="">
@@ -20,8 +20,9 @@
   </div>
   <div id="ingdiv" class="col-md-5" style=" height: 45%; width: 45%;">
     <h1>Ingredients</h1>
-    <ul id="inglist">
+    <ul type="text" id="inglist" name="inglist">
     </ul>
+    <input type="hidden" id="list" name="list" value="hello">
   </div>
   <div>
     <h1>Select your ingredients</h1>
@@ -37,7 +38,6 @@
         }
         ?>
       </select>
-
     <label for="amount">Amount</label>
     <input type="number" name="amount" required="required" id="amount" tabindex="1" class="form-control" placeholder="1,2,3.." value="">
     <p id="ning" class="btn btn-primary" style="position: absolute; right: 0px; margin-top: 10px; border-radius: 30px;">+</p>
@@ -52,13 +52,19 @@
   var list = document.getElementById('inglist');
   var btn = document.getElementById('ning');
   btn.addEventListener("click", addinglist, false);
-
+  var array= [];
   function addinglist(){
     var amount= document.getElementById('amount');
     if(amount.value != ""){
     var list = document.getElementById('inglist');
     var name= document.getElementById("ing");
     list.innerHTML=list.innerHTML+"<li>"+ String(amount.value)+" "+String(name.options[name.selectedIndex].text) +"</li>";
+    var hidden = document.getElementById('list');
+    var tarray =[];
+    tarray.push(amount.value);
+    tarray.push(String(name.options[name.selectedIndex].text))
+    array.push(tarray);
+    hidden.value= String(array);
     }else{
       alert("empty field");
     }

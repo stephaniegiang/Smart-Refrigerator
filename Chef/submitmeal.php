@@ -4,8 +4,8 @@ $type = $_POST['cuisinename'];
 $price = $_POST['price'];
 $price = (string)$price;
 
-$ings = $_POST["sbTwo"];
-echo $ings;
+$ings = $_POST['list'];
+
 /*require('../connect.php');
 pg_query("set search_path='foobox';");
 $ctable = pg_query("select count(id) from meals");
