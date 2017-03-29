@@ -14,7 +14,7 @@
        if($con){
            //check to see if the username and password is valid
            $result =pg_query(
-            "set search_path = 'foobox'; select name,category,username,password from user_account where username='$username' and password = '$password';");
+            "set search_path = 'foobox'; select name,category,username,password from user_account where username='$username' and password = '$password' and approve=true and deleted=false;");
            $my = pg_fetch_row($result);
            $count = pg_num_rows($result);
            $row = pg_fetch_assoc($result);
