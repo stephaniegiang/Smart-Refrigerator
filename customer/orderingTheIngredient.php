@@ -26,7 +26,9 @@
 			$ingredientsLeft = $ingredientsLeft-1;
 			echo "Ingredients before: " .$ingredientsLeft. "<---->";
 			$update = pg_query("Update Ingredient set count=$ingredientsLeft where ID=$primaryKey;");
-			echo "Order of " .$nameOfIngredient. " was successful!";
+			$url = "customer.php?page=meal";
+			$_SESSION['complete']= 'true';
+			header("Location: $url");
 		}
 		else{
 			echo "Order of " .$nameOfIngredient. " was NOT successful! No more left in fridge";
