@@ -16,15 +16,15 @@
             }
           ?>
         </select>
-        <button style="width:100%;" onclick="populateOnce('sbOne','sbTwo')"type="button" class="btn btn-default" id="left" value="<">Select Ingredient</button>
+        <button style="width:100%;" onclick="populateOnce('sbOne','sbTwo')"type="button" class="btn btn-primary" id="left" value="<">Select Ingredient</button>
 		</div>
 		<div class="col-md-5">
 		<form action="orderingTheIngredient.php" method="post">
         <select name="list[]" style="width:100%;min-height:50%;" id="sbTwo" multiple="multiple">
         </select>
-        <button style="width:100%;" type="submit" class="btn btn-default" id="left" value="<">ORDER</button>
+        <button style="width:100%;" type="submit" class="btn btn-primary" id="left" value="<">ORDER</button>
         </form>
-        <button style="width:100%;"onclick="populateOnce('sbTwo','sbOne')"type="button" class="btn btn-default" id="left" value="<">Remove Selected</button>
+        <button style="width:100%;"onclick="populateOnce('sbTwo','sbOne')"type="button" class="btn btn-primary" id="left" value="<">Remove Selected</button>
         
 		</div>
 
