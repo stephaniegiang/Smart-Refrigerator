@@ -12,5 +12,8 @@
         $numOfIngredients = pg_num_rows($findIngredient);
         $ingredientNumber = $numOfIngredients+1;
         $result = pg_query("INSERT INTO Ingredient values ($ingredientNumber, '$name', '$type', $count, $price, $threshold, true);");
+        $url = "chef.php?page=meal";
+        $_SESSION['complete']= 'true';
+        header("Location: $url");
   }
 ?>
