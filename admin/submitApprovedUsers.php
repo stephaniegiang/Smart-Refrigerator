@@ -12,5 +12,6 @@
 	}
 
 	$url = "admin.php?page=approveusers";
+	$_SESSION['complete']= 'true';
 	header("Location: $url");
 ?>
