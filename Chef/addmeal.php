@@ -1,3 +1,7 @@
+<?php 
+  include ('validateChef.php');
+?>
+
 <html>
 <script language="JavaScript" type="text/javascript" src="../js/select.js"></script>
 <link rel="stylesheet" href="../css/style.css">
