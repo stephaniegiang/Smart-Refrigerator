@@ -1,3 +1,6 @@
+<?php 
+  include ('validateChef.php');
+?>
 <?php
     //grab all completed orders from select menu
     $values = $_POST['list'];
