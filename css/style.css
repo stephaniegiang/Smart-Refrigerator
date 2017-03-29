@@ -23,3 +23,16 @@ li .active{
 h2{
 	font-weight: 900;
 }
+
+#ingdiv li{
+	list-style: none;
+	list-style-type: none;
+	padding: 10px 5px;
+	margin-top: 5px;
+	background: rgb(200,200,255);
+	border-radius: 5px;
+}
+
+ul{
+	margin: 0px;
+}

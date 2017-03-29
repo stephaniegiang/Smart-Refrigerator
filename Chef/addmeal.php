@@ -1,5 +1,6 @@
 <html>
 <script language="JavaScript" type="text/javascript" src="../js/select.js"></script>
+<link rel="stylesheet" href="../css/style.css">
 <div style="margin-top:50px;margin-bottom:100px;">
  <h2>Enter meal details</h2>
  <form action="submitmeal.php" method="Post">
@@ -13,8 +14,10 @@
     <label for="Price">Price</label>
     $<input type="number" name="price" required="required" id="price" tabindex="1" class="form-control" placeholder="$" value=""> <br/>
   </div>
-  <div class="col-md-5" style="background-color: black; height: 45%; width: 45%;">
-    
+  <div id="ingdiv" class="col-md-5" style=" height: 45%; width: 45%;">
+    <h1>Ingredients</h1>
+    <ul id="inglist">
+    </ul>
   </div>
   <div>
     <h1>Select your ingredients</h1>
@@ -32,12 +35,30 @@
       </select>
 
     <label for="amount">Amount</label>
-    <input type="text" name="amount" required="required" id="amount" tabindex="1" class="form-control" placeholder="1,2,3.." value="">
-    <button type= class="btn btn-primary" style="position: absolute; right: 0px; margin-top: 10px; border-radius: 30px;">+</button>
+    <input type="number" name="amount" required="required" id="amount" tabindex="1" class="form-control" placeholder="1,2,3.." value="">
+    <p id="ning" class="btn btn-primary" style="position: absolute; right: 0px; margin-top: 10px; border-radius: 30px;">+</p>
     </div>
   </div>
   <button type ="submit" class="btn btn-primary" style="width: 25%; margin-top: 50px; ">Add Meal</button>
 </form>
 </div>
+<script type="text/javascript">
 
+  var name= document.getElementById("ing");
+  var list = document.getElementById('inglist');
+  var btn = document.getElementById('ning');
+  btn.addEventListener("click", addinglist, false);
+
+  function addinglist(){
+    var amount= document.getElementById('amount');
+    if(amount.value != ""){
+    var list = document.getElementById('inglist');
+    var name= document.getElementById("ing");
+    list.innerHTML=list.innerHTML+"<li>"+ String(amount.value)+" "+String(name.options[name.selectedIndex].text) +"</li>";
+    }else{
+      alert("empty field");
+    }
+
+  }
+</script>
 </html>
