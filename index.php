@@ -14,7 +14,7 @@
        if($con){
            //check to see if the username and password is valid
            $result =pg_query(
-            "set search_path = 'foobox'; select name,category,username,password from user_account where username='$username' and password = '$password';");
+            "set search_path = 'foobox'; select name,category,username,password from user_account where username='$username' and password = '$password' and approve=true and deleted=false;");
            $my = pg_fetch_row($result);
            $count = pg_num_rows($result);
            $row = pg_fetch_assoc($result);
@@ -31,7 +31,7 @@
                if ($_SESSION['login_type'] == 'admin'){
                    $url = "admin/admin.php";
                }else if ($_SESSION['login_type'] == 'chef'){
-                   $url = "Chef/chef.php?page=queue";
+                   $url = "chef/chef.php?page=queue";
                }else if ($_SESSION['login_type'] == 'customer'){
                    $url = "customer/customer.php?page=meal";
                }
