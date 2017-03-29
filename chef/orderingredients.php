@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="../css/style.css">
 <div style="margin-top:50px;margin-bottom:100px;">
  <form action="submitOrderIngredients.php" method="post">
-  <div class="col-md-5" style="width: 45%; background-color: white;">
-  </div>
   <div id="ingdiv" class="col-md-5" style=" height: 45%; width: 45%;">
     <h1>Ingredients</h1>
     <ul type="text" id="inglist" name="inglist">
@@ -16,8 +14,8 @@
     <input type="hidden" id="list" name="list" value="hello">
   </div>
   <div>
-    <h1>Select your ingredients</h1>
     <div style="width: 45%; position: relative;" >
+    <h1>Select your ingredients</h1>
       <label for="ing">Ingredient</label>
       <select class="form-control" id="ing" name="ing">
         <?php
