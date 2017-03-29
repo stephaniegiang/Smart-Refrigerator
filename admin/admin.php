@@ -31,6 +31,7 @@
                       <li <?php if ($page === 'approve')echo 'class="active"';?>id=""><a onclick="" href="?page=approve">APPROVE USERS</a></li>
                       <li <?php if ($page === 'delete') echo 'class="active"';?>id=""><a onclick="" href="?page=delete">DELETE USERS</a></li>
                       <li <?php if ($page === 'orders') echo 'class="active"';?>id=""><a onclick="" href="?page=orders">APPROVE ORDERS</a></li>
+					  <li <?php if ($page === 'received') echo 'class="active"';?>id=""><a onclick="" href="?page=received">RECEIVED ORDERS</a></li>                      
                       <li <?php if ($page === 'reports') echo 'class="active"';?>id=""><a onclick="" href="?page=reports">VIEW REPORTS</a></li>
                       <li <?php if ($page === 'help') echo 'class="active"';?>><a id="help" onclick="" href-"customer.php/?page=help">HELP</a></li>
                    </ul>
@@ -45,6 +46,8 @@
 						include('vieworders.php');
 					elseif(($page ==='reports'))
 						include('viewreports.php');
+					elseif(($page ==='received'))
+						include('receivedorders.php');					
 					else {
 						$page='approve';
 						include('approveusers.php');

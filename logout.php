@@ -1,7 +1,8 @@
 
 <?php
-	unset($_SESSION);
-	if(session_destroy()) // Destroying All Sessions
+	session_start();
+	$success = session_destroy();
+	if($success) // Destroying All Sessions
 	{
 	header("Location: index.php"); // Redirecting To Home Page
 	}
