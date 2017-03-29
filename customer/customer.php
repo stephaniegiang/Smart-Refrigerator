@@ -17,7 +17,9 @@
   <body>
     <?php 
     	include('../php_includes/header.php');
-    	$page = $_GET['page'];
+		if(isset($_GET['page']))
+			$page = $_GET['page'];
+		else($page = 'meal');
     ?>
     <div class="container" style="margin-top:-20px;">
         <div class="row">

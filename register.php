@@ -6,7 +6,7 @@
     $role = $_POST["role"];
 
     $submit = pg_query(
-        "set search_path = 'foobox'; Insert into User_Account(Name, Username, Password, Category) values ('$name', '$username', '$password', '$role');");
+        "set search_path = 'foobox'; Insert into user_account values ('$name', '$username', '$password', '$role', false, false);");
       if($submit){
         if($role == 'user'){
             header("Location: customer/customer.php?page=meal");
