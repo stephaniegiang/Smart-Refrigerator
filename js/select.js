@@ -11,8 +11,6 @@ function populateAll(sO,sT){
 	var sbTwo = document.getElementById(sT);
 	var i = sbOne.selectedIndex;
 	sbTwo.add(sbOne.options[i]);		
-	
-	
 }
 
 function removeElement(){
