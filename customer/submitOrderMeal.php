@@ -18,6 +18,8 @@
         $numberOfQueues = $numberOfQueues+1;
         $userID = $_SESSION['login_user'];
         $result = pg_query("INSERT INTO queue values ($primaryKey, '$userID', $numberOfQueues, false);");
-        echo "Order of " .$mealToOrder. " was successful!";
+        $url = "customer.php?page=meal";
+        $_SESSION['complete']= 'true';
+        header("Location: $url");
     }
 ?>
