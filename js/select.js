@@ -18,3 +18,15 @@ function removeElement(){
 	sbOne.remove(sbOne.selectedIndex);
 }
 
+
+function complete(){
+	setTimeout(showcomplete, 2000);
+}
+function showcomplete(){
+	var complete = document.getElementById("confirm");
+	complete.className="confirm";
+	setTimeout(function(){
+		var complete = document.getElementById("confirm");
+		complete.className="";
+	}, 10000);
+}
