@@ -22,7 +22,7 @@
 			
 			
         </select>
-        <button style="width:100%;" onclick="populateOnce('sbOne','sbTwo')"type="button" class="btn btn-default" id="left" value="<">Select Meal</button>
+        <button style="width:100%;" onclick="populateOnce('sbOne','sbTwo')" type="button" class="btn btn-default" id="left" value="<">Select Meal</button>
 		</div>
 		<div class="col-md-5">
             <form action="submitOrderMeal.php" method="post">
@@ -30,7 +30,7 @@
                 </select>
                 <button style="width:100%;" type="submit" class="btn btn-default" id="left" value="<">ORDER</button>
             </form>
-        <button style="width:100%;"onclick="populateOnce('sbTwo','sbOne')"type="button" class="btn btn-default" id="left" value="<">Remove Selected</button>
+        <button style="width:100%;"onclick="populateOnce('sbTwo','sbOne')" type="button" class="btn btn-default" id="left" value="<">Remove Selected</button>
 		</div>
     </div>
     
