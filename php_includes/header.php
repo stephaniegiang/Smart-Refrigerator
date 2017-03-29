@@ -1,7 +1,6 @@
 <?php 
 	include('config.php');
 	include('session.php');
-  echo print_r($_SESSION);
 ?>
 <html>
   <head>
