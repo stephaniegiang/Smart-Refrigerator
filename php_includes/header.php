@@ -11,7 +11,7 @@
     <nav role="navigation" class="navbar navbar-default" style="color:#CACFD6;">
         <div class="container">
             <div class="navbar-header">
-                <p class="navbar-brand">Welcome, <?php /*echo $_SESSION['login_name']; */?></p>
+                <p class="navbar-brand">Welcome, <?php echo $_SESSION['login_name']; ?></p>
             </div>
             
 
