@@ -31,7 +31,7 @@
                if ($_SESSION['login_type'] == 'admin'){
                    $url = "admin/admin.php";
                }else if ($_SESSION['login_type'] == 'chef'){
-                   $url = "chef/chef.php?page=queue";
+                   $url = "Chef/chef.php?page=queue";
                }else if ($_SESSION['login_type'] == 'customer'){
                    $url = "customer/customer.php?page=meal";
                }
