@@ -1,5 +1,7 @@
 <html>
 <form id="formID" name="formID" method="post" action="addingIngredients.php" role="form">
+        <div style="width: 45%;">
+        <h1>Enter Ingredient details</h1>
           <!-- INGREDIT NAME -->
           <div class="row">
             <div class="form-group-xs">
@@ -47,5 +49,6 @@
           <div class="text-center" style="margin-top:20px">
             <button name="add-item" id="add-item" type="submit" class="btn btn-primary"><strong>Add Ingredient</strong></button>
           </div>
-        </form>
+        </div>
+      </form>
 </html>
