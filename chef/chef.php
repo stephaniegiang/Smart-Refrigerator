@@ -30,6 +30,7 @@
                    <ul class="nav nav-pills nav-stacked pills"style="">
                       <li <?php if ($_GET['page'] === 'meal') echo 'class="active"';?>id=""><a onclick="" href="?page=meal">ADD MEAL</a></li>
                       <li <?php if ($_GET['page'] === 'ingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=ingredients">ADD INGREDIENTS</a></li>
+                      <li <?php if ($_GET['page'] === 'orderingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=orderingredients">ORDER INGREDIENTS</a></li>
                       <li <?php if ($_GET['page'] === 'queue') echo 'class="active"';?>id=""><a onclick="" href="?page=queue">VIEW QUEUE</a></li>
                       <li <?php if ($_GET['page'] === 'report') echo 'class="active"';?>id=""><a onclick="" href="?page=report">MEALS REPORT</a></li>
                       <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href="customer.php/?page=help">HELP</a></li>
@@ -45,7 +46,8 @@
                           include('viewqueue.php');
                         elseif(($page ==='report'))
                           include('report.php');
-                  ?>
+                        elseif(($page ==='orderingredients'))
+                        include('orderingredients.php');                  ?>
               </div>
           </div>
       </div>
