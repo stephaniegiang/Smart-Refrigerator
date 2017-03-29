@@ -26,7 +26,6 @@
         <div class="row">
                 <div class="col-lg-3 col-sm-3 sidebar" style="">
                    <!--<h3>Investors</h3>-->
-
                    <ul class="nav nav-pills nav-stacked pills"style="">
                       <li <?php if ($_GET['page'] === 'meal') echo 'class="active"';?>id=""><a onclick="" href="?page=meal">ADD MEAL</a></li>
                       <li <?php if ($_GET['page'] === 'ingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=ingredients">ADD INGREDIENTS</a></li>
