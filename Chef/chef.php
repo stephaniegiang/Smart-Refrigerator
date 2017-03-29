@@ -19,7 +19,6 @@
   <body>
     <?php 
       include('../php_includes/header.php');
-  //include('../php_includes/session.php');
       $page = $_GET['page'];
     ?>
     <div class="container" style="margin-top:-20px;">
