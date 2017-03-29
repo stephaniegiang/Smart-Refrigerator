@@ -30,3 +30,10 @@ function showcomplete(){
 		complete.className="";
 	}, 10000);
 }
+
+//used for chef report page
+function showStep(step){
+document.getElementById(step).style.visibility = 'visible';		
+}
+
+
