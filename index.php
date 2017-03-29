@@ -32,7 +32,7 @@
                    $url = "customer/customer.php?page=meal";
                }else if ($_SESSION['login_type'] == 'chef'){
                    $url = "Chef/chef.php?page=queue";
-               }else{
+               }else if ($_SESSION['login_type'] == 'customer'){
                    $url = "customer/customer.php?page=meal";
                }
                 header("Location: $url");

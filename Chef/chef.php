@@ -1,3 +1,7 @@
+<?php 
+  include ('validateChef.php');
+?>
+
 <html>
   <head>
     <!-- Latest compiled and minified CSS -->

@@ -1,8 +1,6 @@
-<?php
-    //Start the session
-    //session_start();
+<?php 
+  include ('validateCustomer.php');
 ?>
-
 <html>
 	<script language="JavaScript" type="text/javascript" src="../js/select.js"></script>
     <div style="margin-top:50px;margin-bottom:100px;">
