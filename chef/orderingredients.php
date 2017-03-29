@@ -34,7 +34,7 @@
     <p id="ning" class="btn btn-primary" style="position: absolute; right: 0px; margin-top: 10px; border-radius: 30px;">+</p>
     </div>
   </div>
-  <button type ="submit" class="btn btn-primary" style="width: 25%; margin-top: 50px; ">Add Meal</button>
+  <button type ="submit" class="btn btn-primary" style="width: 25%; margin-top: 50px; ">Order Ingredients</button>
 </form>
 </div>
 <script type="text/javascript">
