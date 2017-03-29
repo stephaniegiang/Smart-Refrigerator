@@ -17,7 +17,10 @@
   <body>
 	<?php 
 		include('../php_includes/header.php');
-		$page = $_GET['page'];
+		if(isset($_GET['page']))
+			$page = $_GET['page'];
+		else($page = 'approve');
+		
 	?>
     <div class="container" style="margin-top:-20px;">
         <div class="row">
@@ -25,11 +28,11 @@
                    <!--<h3>Investors</h3>-->
 
                    <ul class="nav nav-pills nav-stacked pills"style="">
-                      <li <?php if ($_GET['page'] === 'approve') echo 'class="active"';?>id=""><a onclick="" href="?page=approve">APPROVE USERS</a></li>
-                      <li <?php if ($_GET['page'] === 'delete') echo 'class="active"';?>id=""><a onclick="" href="?page=delete">DELETE USERS</a></li>
-                      <li <?php if ($_GET['page'] === 'orders') echo 'class="active"';?>id=""><a onclick="" href="?page=orders">APPROVE ORDERS</a></li>
-                      <li <?php if ($_GET['page'] === 'reports') echo 'class="active"';?>id=""><a onclick="" href="?page=reports">VIEW REPORTS</a></li>
-                      <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href-"customer.php/?page=help">HELP</a></li>
+                      <li <?php if ($page === 'approve')echo 'class="active"';?>id=""><a onclick="" href="?page=approve">APPROVE USERS</a></li>
+                      <li <?php if ($page === 'delete') echo 'class="active"';?>id=""><a onclick="" href="?page=delete">DELETE USERS</a></li>
+                      <li <?php if ($page === 'orders') echo 'class="active"';?>id=""><a onclick="" href="?page=orders">APPROVE ORDERS</a></li>
+                      <li <?php if ($page === 'reports') echo 'class="active"';?>id=""><a onclick="" href="?page=reports">VIEW REPORTS</a></li>
+                      <li <?php if ($page === 'help') echo 'class="active"';?>><a id="help" onclick="" href-"customer.php/?page=help">HELP</a></li>
                    </ul>
                 </div>
                 <!-- end of sidebar thing-->
@@ -39,9 +42,13 @@
 					elseif(($page ==='delete'))
 						include('deleteusers.php');
 					elseif(($page ==='orders'))
-						include('orders.php');
+						include('vieworders.php');
 					elseif(($page ==='reports'))
 						include('viewreports.php');
+					else {
+						$page='approve';
+						include('approveusers.php');
+					}
                 ?>
               </div>
           </div>
