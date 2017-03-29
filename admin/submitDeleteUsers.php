@@ -8,9 +8,9 @@
 
 	//Loop through each selection and adding it to the history
 	foreach ($values as $primaryKey){
-		pg_query("update user_account set approve=true where username='$primaryKey';");
+		pg_query("update user_account set deleted=true where username='$primaryKey';");
 	}
 
-	$url = "admin.php?page=approveusers";
+	$url = "admin.php?page=delete";
 	header("Location: $url");
 ?>
