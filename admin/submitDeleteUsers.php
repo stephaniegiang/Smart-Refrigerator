@@ -12,5 +12,6 @@
 	}
 
 	$url = "admin.php?page=delete";
+	$_SESSION['complete']= 'true';
 	header("Location: $url");
 ?>
