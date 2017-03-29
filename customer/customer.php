@@ -1,8 +1,6 @@
-<?php
-    //Start the session
-    session_start();
+<?php 
+  include ('validateCustomer.php');
 ?>
-
 <html>
   <head>
     <!-- Latest compiled and minified CSS -->

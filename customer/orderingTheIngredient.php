@@ -1,4 +1,5 @@
 <?php
+  	include ('validateCustomer.php');
 	//grab selected values
 	$values = $_POST['list'];
 	//log into database
