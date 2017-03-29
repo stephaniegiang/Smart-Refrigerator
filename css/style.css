@@ -39,6 +39,12 @@ li .active{
 	background: rgb(200,200,255);
 	border-radius: 5px;
 }
+.op2{
+	padding: 10px 5px;
+	margin-top: 5px;
+	background: rgb(255,200,200);
+	border-radius: 5px;
+}
 h2{
 	font-weight: 900;
 }
