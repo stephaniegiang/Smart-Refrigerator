@@ -8,7 +8,7 @@
     $query = pg_query("set search_path='foobox';");
 
     //Get the current number of ingredients in database
-    $getAllQueues = pg_query("SELECT * FROM queue;");
+    $getAllQueues = pg_query("select * from queue;");
     $numberOfQueues = pg_num_rows($getAllQueues);
     //Loop through each selection and adding it to the queue
     foreach ($values as $primaryKey){
@@ -17,7 +17,7 @@
         //Add meal to the queue
         $numberOfQueues = $numberOfQueues+1;
         $userID = $_SESSION['login_user'];
-        $result = pg_query("INSERT INTO queue values ($primaryKey, '$userID', $numberOfQueues, false);");
+        $result = pg_query("insert into queue values ($primaryKey, '$userID', $numberOfQueues, false);");
         $url = "customer.php?page=meal";
         $_SESSION['complete']= 'true';
         header("Location: $url");
