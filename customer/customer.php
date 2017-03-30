@@ -30,7 +30,7 @@
                       <li <?php if ($_GET['page'] === 'meal') echo 'class="active"';?>id=""><a onclick="" href="?page=meal">ORDER MEAL</a></li>
                       <li <?php if ($_GET['page'] === 'ingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=ingredients">ORDER INGREDIENTS</a></li>
                       <li <?php if ($_GET['page'] === 'orders') echo 'class="active"';?>id=""><a onclick="" href="?page=orders">MY ORDERS</a></li>
-                      <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href-"customer.php/?page=help">HELP</a></li>
+                      <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href="?page=help">HELP</a></li>
                    </ul>
                 </div>
                 <!-- end of sidebar thing-->
@@ -41,6 +41,8 @@
 						include('orderingredient.php');
 					elseif(($page ==='orders'))
 						include('orders.php');
+          elseif(($page ==='help'))
+            include('help.php');
                 ?>
               </div>
           </div>

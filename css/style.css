@@ -1,8 +1,25 @@
 body{
   background-color:#2E6171;
   background: url("../img/fr.jpg");
- 
 }
+#logout{
+	background: #333;
+	border-radius: 10px;
+	margin-bottom: 5px;
+	color: white;
+}
+/*help*/
+.des{
+	margin-left: 10px;
+	text-align: center;
+}
+.head{
+	background: #9FD8CB;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
 .confirm{
 	background: linear-gradient(#171,#191);
 	border-radius: 4px;
