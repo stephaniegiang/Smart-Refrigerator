@@ -30,8 +30,10 @@
                    <!--<h3>Investors</h3>-->
                    <ul class="nav nav-pills nav-stacked pills"style="">
                       <li <?php if ($_GET['page'] === 'meal') echo 'class="active"';?>id=""><a onclick="" href="?page=meal">ADD MEAL</a></li>
+                      <li <?php if ($_GET['page'] === 'deletemeal') echo 'class="active"';?>id=""><a onclick="" href="?page=deletemeal">DELETE MEAL</a></li>
                       <li <?php if ($_GET['page'] === 'ingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=ingredients">ADD INGREDIENTS</a></li>
                       <li <?php if ($_GET['page'] === 'orderingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=orderingredients">ORDER INGREDIENTS</a></li>
+                      <li <?php if ($_GET['page'] === 'deleteingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=deleteingredients">DELETE INGREDIENTS</a></li>
                       <li <?php if ($_GET['page'] === 'queue') echo 'class="active"';?>id=""><a onclick="" href="?page=queue">VIEW QUEUE</a></li>
                       <li <?php if ($_GET['page'] === 'report') echo 'class="active"';?>id=""><a onclick="" href="?page=report">MEALS REPORT</a></li>
                       <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href="customer.php/?page=help">HELP</a></li>
@@ -48,7 +50,11 @@
                         elseif(($page ==='report'))
                           include('report.php');
                         elseif(($page ==='orderingredients'))
-                        include('orderingredients.php');                  ?>
+                        include('orderingredients.php');  
+                        elseif(($page ==='deleteingredients'))
+                        include('deleteIngredients.php');     
+                        elseif(($page ==='deletemeal'))
+                        include('deletemeal.php');               ?>
               </div>
           </div>
       </div>
