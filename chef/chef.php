@@ -35,6 +35,7 @@
                       <li <?php if ($_GET['page'] === 'orderingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=orderingredients">ORDER INGREDIENTS</a></li>
                       <li <?php if ($_GET['page'] === 'deleteingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=deleteingredients">DELETE INGREDIENTS</a></li>
                       <li <?php if ($_GET['page'] === 'queue') echo 'class="active"';?>id=""><a onclick="" href="?page=queue">VIEW QUEUE</a></li>
+                      <li <?php if ($_GET['page'] === 'vieworders') echo 'class="active"';?>id=""><a onclick="" href="?page=vieworders">VIEW OPEN ORDERS</a></li>
                       <li <?php if ($_GET['page'] === 'report') echo 'class="active"';?>id=""><a onclick="" href="?page=report">MEALS REPORT</a></li>
                       <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href="customer.php/?page=help">HELP</a></li>
                    </ul>
@@ -54,7 +55,9 @@
                         elseif(($page ==='deleteingredients'))
                         include('deleteIngredients.php');     
                         elseif(($page ==='deletemeal'))
-                        include('deletemeal.php');               ?>
+                        include('deletemeal.php');   
+                        elseif(($page ==='vieworders'))
+                        include('viewOpenOrders.php');            ?>
               </div>
           </div>
       </div>
