@@ -25,7 +25,6 @@
 		$ingredientID = $ingredientID[0];
 		$num = $listIngredients[$index];
 		pg_query("insert into relations values ($numberRelations, $mealID, $ingredientID, $num);");
-		echo $name;
 	}
 
 	$url = "chef.php?page=meal";
