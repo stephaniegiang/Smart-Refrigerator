@@ -44,4 +44,23 @@
                 }
             ?>
         </ul>
+        <h2>Ingredients Ordered</h2>
+        <ul>
+            <?php
+                //connect to the database
+                require('../connect.php');
+                $setPath = pg_query("Set search_path='foobox';");
+                //Grab all the orders of the user
+                $userID = $_SESSION['login_user'];
+                $getIngredients = pg_query("Select ingredientid, historyid from history where customerid='$userID';");
+                //go through all the orders
+                while($row = pg_fetch_array($getIngredients)){
+                    //grab the name of the ingredient
+                    $nameOfIngredient = pg_fetch_array(pg_query("select name from ingredient where id=$row[0];"));
+                    $nameOfIngredient = $nameOfIngredient[0];
+                    //display the name of ingredient as well as order number
+                    echo "<li>".$nameOfIngredient." (Order #" .$row[1]. ")</li>";
+                }
+            ?>
+        </ul>
 </html>        

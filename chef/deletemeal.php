@@ -1,5 +1,5 @@
 <?php 
-  include ('validateCustomer.php');
+  include ('validateChef.php');
 ?>
 <html>
 	<script language="JavaScript" type="text/javascript" src="../js/select.js"	></script>
@@ -10,7 +10,7 @@
           <?php
             require('../connect.php');
             $setPath = pg_query("Set search_path='foobox';");
-            $getIngredients = pg_query("Select * from Ingredient where active =true and count>0;");
+            $getIngredients = pg_query("select * from meals as meal where NOT EXISTS (select * from queue where mealsid= meal.id and completed=false) and active=true;");
             while($row = pg_fetch_array($getIngredients)){
               echo '<option class="op" value="'.$row["id"]. '"">' .$row["name"].'</option>';
             }
@@ -19,7 +19,7 @@
         <button style="width:100%;" onclick="populateOnce('sbOne','sbTwo')"type="button" class="btn btn-primary" id="left" value="<">Select Ingredient</button>
 		</div>
 		<div class="col-md-5">
-		<form action="orderingTheIngredient.php" method="post">
+		<form action="submitDeleteMeal.php" method="post">
         <select name="list[]" style="width:100%;min-height:50%;" id="sbTwo" multiple="multiple">
         </select>
         <button style="width:100%;" type="submit" class="btn btn-primary" id="left" value="<">ORDER</button>
