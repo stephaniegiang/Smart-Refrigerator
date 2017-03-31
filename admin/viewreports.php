@@ -53,7 +53,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<h3>Most Requested Ingredient</h3>
-			<p> According to our statistics, the most fequently ordered ingredient is:<b>
+			<p> According to our statistics, the most frequently ordered ingredient is:<b>
 				<?php
 				//most requested ingredient -->history
 				
