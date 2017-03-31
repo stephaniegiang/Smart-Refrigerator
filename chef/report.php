@@ -3,21 +3,37 @@
 		<h2>Ingredient Availability</h2>
 		
 		<div class="col-md-4">
-	        <select class ="form-control" onchange="showStep('step2');">
-	          <option selected disabled>Select Cuisine</option>
-			  <option>Italian</option>
-	          <option>KFC</option>
-	          <option>All</option>
+	        <select class ="form-control" onchange="showStep('step2');" name="cuisinename" id="cuisinename">
+	            <option selected disabled>Select Cuisine</option>
+			  	<option value="Canadian">Canadian</option>
+        		<option value="Italian">Italian</option>
+        		<option value="Asian">Asian</option>
+		        <option value="European">European</option>
+		        <option value="Carribean">Carribean</option>
+		        <option value="Mexican">Mexican</option>
+		        <option value="African">African</option>
+		        <option value="Middle Eastern">Middle Eastern</option>
+			    <option value="All">All</option>
 	        </select>
 			
 		</div>
 		<div class="col-md-4 offset-md-4" id="step2" style="visibility: hidden;">
-	        <select class ="form-control" onchange="showStep('step3');">
+	        <select class ="form-control" onchange="showStep('step3');" name="mealname" id="mealname">
 	          <option selected disabled>Select Meal</option>
-			  <option>Chicken</option>
-	          <option>Spicy Chicken</option>
-	          <option>Popcorn Chicken</option>
-	          <option>All</option>
+			  <?php
+			  	$type = $_POST['cuisinename'];
+			  	echo $type;
+			  	require('../connect.php');
+			  	$query = 0;
+			  	if($type == "All"){
+			  		$query= pg_query("select id, name from meals;");
+			  	}else{
+			  		$query = pg_query("select id, name from meals where cuisine='$type';");
+			  	}
+			  	while($row = pg_fetch_row($query)){
+			  		echo '<option value="'.$row[0].'">'.$row[1].'</option>';
+			  	}
+			  ?>
 	        </select>
 		</div>		
 	</div>
