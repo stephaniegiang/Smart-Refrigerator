@@ -13,7 +13,19 @@
     <input type="text" name="mealname" required="required" id="mealname" tabindex="1" class="form-control" placeholder="Meal Name" value="">
     <br/>
     <label for="Cuisinename">Cuisine</label>
-    <input type="text" name="cuisinename" required="required" id="cuisinename" tabindex="1" class="form-control" placeholder="E.g Italian,Chinese.." value="">
+    <!-- <input type="text" name="cuisinename" required="required" id="cuisinename" tabindex="1" class="form-control" placeholder="E.g Italian,Chinese.." value="">-->
+    <div class="form-group">
+      <select class ="form-control" name='cuisinename' id='cuisinename'>
+        <option selected value="Canadian">Canadian</option>
+        <option value="Italian">Italian</option>
+        <option value="Asian">Asian</option>
+        <option value="European">European</option>
+        <option value="Carribean">Carribean</option>
+        <option value="Mexican">Mexican</option>
+        <option value="African">African</option>
+        <option value="Middle Eastern">Middle Eastern</option>
+      </select>
+    </div>
     <br/>
     <label for="Price">Price</label>
     $<input type="number" name="price" required="required" id="price" tabindex="1" class="form-control" placeholder="$" value=""> <br/>
