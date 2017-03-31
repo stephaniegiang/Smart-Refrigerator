@@ -21,8 +21,8 @@ body{
 	margin-bottom: 10px;
 	border: 2px solid grey;
 }
-h2 .head{
-	
+.head h2{
+	margin: 0px;
 }
 
 .confirm{

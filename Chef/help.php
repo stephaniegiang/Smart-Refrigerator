@@ -7,19 +7,19 @@
 	</div>
 	<div class="head">
 		<h2>Delete Meal</h2>
-		<p class="des">Click on the Meal you want to Delete then click "DELETE"</p>
-		<p class="des">When you are done selecting Ingredients, click order to confirm your selection</p>
-		<p class="des">You can proceed to remove Ingredient(s) from the fridge</p>
+		<p class="des">Select the Meal(s) you want to Delete then click "DELETE"</p>
 	</div>
 	<div class="head">
-		<h2>My Orders</h2>
-		<p class="des">Here you can view your Orders</p>
-		<p class="des">The completed orders and the Queued orders are separate</p>
+		<h2>Add Ingredient</h2>
+		<p class="des">Here you can add new ingredients</p>
+		<p class="des">Enter the details required for the new ingredient</p>
+		<p class="des">Click dd Ingredient, and the ingredient will be available</p>
 	</div>
 	<div class="head">
-		<h2>My Orders</h2>
-		<p class="des">Here you can view your Orders</p>
-		<p class="des">The completed orders and the Queued orders are separate</p>
+		<h2>Order Ingredient</h2>
+		<p class="des">Here you can Order exsisting ingredients</p>
+		<p class="des">Select the ingredient you want to order and the amount you need</p>
+		<p class="des">Click the +(plus) button to confirm and multiple ingredients</p>
 	</div>
 	<div class="head">
 		<h2>My Orders</h2>
