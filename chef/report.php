@@ -21,7 +21,7 @@
 	        <select class ="form-control" onchange="showStep('step3');" name="mealname" id="mealname">
 	          <option selected disabled>Select Meal</option>
 			  <?php
-			  	$type = $_POST['cuisinename'];
+			  	//$type = $_POST['cuisinename'];
 			  	echo $type;
 			  	require('../connect.php');
 			  	$query = 0;
