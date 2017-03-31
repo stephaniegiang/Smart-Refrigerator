@@ -1,4 +1,5 @@
 <html>
+<script language="JavaScript" type="text/javascript" src="../js/select.js"></script>
 <form id="formID" name="formID" method="post" action="addingIngredients.php" role="form">
         <div style="width: 45%;">
         <h1>Enter Ingredient details</h1>
