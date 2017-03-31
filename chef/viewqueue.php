@@ -34,7 +34,10 @@
                             $indx = array_search($ingrow[0], $ids);
                             $idOfMeal = $row["mealsid"];
                             $nameOfMeal = pg_fetch_array(pg_query("select name from meals where id=$idOfMeal;"));
-                            array_push($all,'<option class="op" value="'.$row[2]. '"">' .$nameOfMeal[0].' (Order #' .$row[2].' for '.$row[1].')</option>' );
+                            if (! in_array('<option class="op" value="'.$row[2]. '"">' .$nameOfMeal[0].' (Order #' .$row[2].' for '.$row[1].')</option>', $all)){
+                                array_push($all,'<option class="op" value="'.$row[2]. '"">' .$nameOfMeal[0].' (Order #' .$row[2].' for '.$row[1].')</option>');
+                            }
+                            
                             if( ($count-$amt[$indx]) >0 ){
                                 $count = $count-$amt[$indx];
                                 //echo into
