@@ -111,7 +111,7 @@
                         </div>
                       </div>
                     </form>
-                    <form id="register-form" onsubmit="return validate()" action="http://google.com" method="post"  role="form" style="display: none;">
+                    <form id="register-form" onsubmit="return validate()" action="register.php" method="post"  role="form" style="display: none;">
                       <div class="form-group">
                         <input required type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
                       </div>
