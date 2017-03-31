@@ -97,10 +97,6 @@
                       <div class="form-group">
                         <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                       </div>
-                      <div class="form-group text-center">
-                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                        <label for="remember"> Remember Me</label>
-                      </div>
                       <div class="form-group">
                         <div class="row">
                           <div class="col-sm-6 col-sm-offset-3">
@@ -115,18 +111,18 @@
                         </div>
                       </div>
                     </form>
-                    <form id="register-form" action="register.php" method="post" role="form" style="display: none;">
+                    <form id="register-form" onsubmit="return validate()" action="http://google.com" method="post"  role="form" style="display: none;">
                       <div class="form-group">
-                        <input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
+                        <input required type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
                       </div>
                       <div class="form-group">
-                        <input type="text" name="username" id="username" tabindex="2" class="form-control" placeholder="Username" value="">
+                        <input required type="text" name="username" id="username" tabindex="2" class="form-control" placeholder="Username" value="">
                       </div>
                       <div class="form-group">
-                        <input type="password" name="password" id="password" tabindex="3" class="form-control" placeholder="Password">
+                        <input required type="password" name="password" id="password" tabindex="3" class="form-control" placeholder="Password">
                       </div>
                       <div class="form-group">
-                        <input type="password" name="confirm-password" id="confirm-password" tabindex="4" class="form-control" placeholder="Confirm Password">
+                        <input required type="password" name="confirm-password" id="confirm-password" tabindex="4" class="form-control" placeholder="Confirm Password">
                       </div>
                       <div class="form-group">
                         <select class ="form-control" name="role" id="role" tabindex="5">
@@ -151,5 +147,6 @@
         </div>
       </div>
     <script language="JavaScript" type="text/javascript" src="js/login.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/validate.js"></script>
   </body>
 </html>
