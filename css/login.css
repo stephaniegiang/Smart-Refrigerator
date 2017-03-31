@@ -4,6 +4,21 @@ body {
   	background: url("img/fr.jpg");
 }
 
+div.logo{
+	font-family: 'Ubuntu', sans-serif;
+	color: #ffffff;
+	font-size: 120px;
+	line-height: 120px;
+}
+
+div.slogan{
+	font-family: 'Ubuntu', sans-serif;
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+
 .panel-login {
 	border-color: #ccc;
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
