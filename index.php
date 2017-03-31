@@ -36,10 +36,12 @@
                    $url = "customer/customer.php?page=meal";
                }
                 header("Location: $url");
-       }else {
-           echo '<script>window.alert("Username and/or password is invalid.");</script>';
-       }
-   }
+            }else {
+              echo '<script>window.alert("Username and/or password is invalid.");</script>';
+            }
+      }else{
+        echo '<script>window.alert("Connection failed.");</script>';
+      }
  }
 ?>
 
