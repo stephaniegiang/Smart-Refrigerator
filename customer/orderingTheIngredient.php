@@ -44,7 +44,7 @@
 		}elseif ($ingredientsLeft=0){
 			echo "Order of " .$nameOfIngredient. " was NOT successful! No more left in fridge";
 		}
-		if($ingredientsLeft=<$threshold){	
+		if($ingredientsLeft<=$threshold){	
 			//Add ingredient to the order
 			 $ordersID = pg_fetch_array(pg_query("select count(id) from orders;"));
 	         $ordersID = $ordersID[0] + 1;
