@@ -6,18 +6,15 @@
 				<th>Ingredient</th>
 				<th>Quantity</th> 
 			</tr>
-			<tr>
-				<td>First ingredient</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Second ingredient</td>
-				<td>20</td>
-			</tr>
-			<tr>
-				<td>Chicken</td>
-				<td>Infinite</td>
-			</tr>
+			<?php
+				require("../connect.php");
+				pg_query("set search_path='foobox';");
+				$grabAllIngredients = pg_query("select name, count from ingredient;");
+				while($row = pg_fetch_row($grabAllIngredients)){
+					echo "<tr><td>".$row[0]."</td>";
+					echo "<td>".$row[1]."</td></tr>";
+				}
+			?>
 		</table>	
 	</div>
 </html>
