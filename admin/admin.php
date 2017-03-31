@@ -34,7 +34,6 @@
 					  <li <?php if ($page === 'received') echo 'class="active"';?>id=""><a onclick="" href="?page=received">RECEIVED ORDERS</a></li>                      
                       <li <?php if ($page === 'reports') echo 'class="active"';?>id=""><a onclick="" href="?page=reports">VIEW REPORTS</a></li>
                       <li <?php if ($page === 'ingredients') echo 'class="active"';?>id=""><a onclick="" href="?page=ingredients">INGREDIENT REPORT</a></li>
-                      <li <?php if ($page === 'help') echo 'class="active"';?>><a id="help" onclick="" href="customer.php/?page=help">HELP</a></li>
                       <li <?php if ($page === 'help') echo 'class="active"';?>><a id="help" onclick="" href="?page=help">HELP</a></li>
                    </ul>
                 </div>
