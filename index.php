@@ -67,7 +67,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <center><div class="logo">foo<span class ="blue">box.</span></div></center>
+          <center><div class="logo">foobox.</div></center>
           <center><div class="slogan">Making life somewhat easier</div></center>
         </div>
       </div>
