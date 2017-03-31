@@ -37,7 +37,7 @@
                }
                 header("Location: $url");
        }else {
-           echo "Your Login Name or Password is invalid";
+           echo '<script>window.alert("Username and/or password is invalid.");</script>';
        }
    }
  }
