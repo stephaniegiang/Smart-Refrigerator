@@ -37,7 +37,7 @@
 		$ingredientCount = pg_fetch_row(pg_query("select count from ingredient where name='$name';"));
 		$ingredientCount = $ingredientCount[0];
 		
-		if($ingredientCount<=$threshold){	
+		if($ingredientCount=<$threshold){	
 			//Add ingredient to the order
 			 $ordersID = pg_fetch_array(pg_query("select count(id) from orders;"));
 	         $ordersID = $ordersID[0] + 1;
