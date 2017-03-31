@@ -33,7 +33,7 @@
                       <li <?php if ($page === 'orders') echo 'class="active"';?>id=""><a onclick="" href="?page=orders">APPROVE ORDERS</a></li>
 					  <li <?php if ($page === 'received') echo 'class="active"';?>id=""><a onclick="" href="?page=received">RECEIVED ORDERS</a></li>                      
                       <li <?php if ($page === 'reports') echo 'class="active"';?>id=""><a onclick="" href="?page=reports">VIEW REPORTS</a></li>
-                      <li <?php if ($page === 'help') echo 'class="active"';?>><a id="help" onclick="" href-"customer.php/?page=help">HELP</a></li>
+                      <li <?php if ($page === 'help') echo 'class="active"';?>><a id="help" onclick="" href="?page=help">HELP</a></li>
                    </ul>
                 </div>
                 <!-- end of sidebar thing-->
@@ -47,7 +47,9 @@
 					elseif(($page ==='reports'))
 						include('viewreports.php');
 					elseif(($page ==='received'))
-						include('receivedorders.php');					
+						include('receivedorders.php');
+            elseif(($page ==='help'))
+            include('help.php');					
 					else {
 						$page='approve';
 						include('approveusers.php');

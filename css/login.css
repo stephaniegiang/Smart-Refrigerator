@@ -10,6 +10,12 @@ div.logo{
 	font-size: 120px;
 	line-height: 120px;
 }
+.blue{
+	font-family: 'Ubuntu', sans-serif;
+	color: #59B2E0;
+	font-size: 120px;
+	line-height: 120px;
+}
 
 div.slogan{
 	font-family: 'Ubuntu', sans-serif;
