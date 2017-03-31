@@ -4,7 +4,7 @@
 		<p class="des">Click on the meal(s) you want to order then click "Select Meal"</p>
 		<p class="des">When you are done selecting meals, click order to place your order</p>
 		<p class="des">The chef would proceed to complete your order in time</p>
-		<p class="des">If there is insufficient ingredients for the meal, it will take longer to be made</p>
+		<p class="des">If there are insufficient ingredients for the meal, it will take longer to be made</p>
 	</div>
 	<div class="head">
 		<h2>Order Ingredients</h2>

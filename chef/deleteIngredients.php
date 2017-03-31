@@ -22,7 +22,7 @@
 		<form action="submitDeleteIngredients.php" method="post">
         <select name="list[]" style="width:100%;min-height:50%;" id="sbTwo" multiple="multiple">
         </select>
-        <button style="width:100%;" type="submit" class="btn btn-primary" id="left" value="<">ORDER</button>
+        <button style="width:100%;" type="submit" class="btn btn-primary" id="left" value="<">DELETE</button>
         </form>
         <button style="width:100%;"onclick="populateOnce('sbTwo','sbOne')"type="button" class="btn btn-primary" id="left" value="<">Remove Selected</button>
         
