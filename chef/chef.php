@@ -37,7 +37,7 @@
                       <li <?php if ($_GET['page'] === 'queue') echo 'class="active"';?>id=""><a onclick="" href="?page=queue">VIEW QUEUE</a></li>
                       <li <?php if ($_GET['page'] === 'vieworders') echo 'class="active"';?>id=""><a onclick="" href="?page=vieworders">VIEW OPEN ORDERS</a></li>
                       <li <?php if ($_GET['page'] === 'report') echo 'class="active"';?>id=""><a onclick="" href="?page=report">MEALS REPORT</a></li>
-                      <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href="?page=help">HELP</a></li>
+                      <li <?php if ($_GET['page'] === 'help') echo 'class="active"';?>><a id="help" onclick="" href="customer.php/?page=help">HELP</a></li>
                    </ul>
                 </div>
                 <!-- end of sidebar thing-->
@@ -57,9 +57,7 @@
                         elseif(($page ==='deletemeal'))
                         include('deletemeal.php');   
                         elseif(($page ==='vieworders'))
-                        include('viewOpenOrders.php');
-                        elseif(($page ==='help'))
-                        include('help.php');             ?>
+                        include('viewOpenOrders.php');            ?>
               </div>
           </div>
       </div>
