@@ -11,6 +11,7 @@
     pg_query("Update meals set active=false where ID=$primaryKey;");
     pg_query("update relations set active=false where mealid=$primaryKey;");
   }
+  include("../php_includes/session.php");
   $_SESSION['complete']= 'true';
   $url = "chef.php?page=deletemeal";
   header("Location: $url");
