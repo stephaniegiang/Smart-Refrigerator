@@ -35,8 +35,30 @@ function showcomplete(){
 }
 
 //used for chef report page
-function showStep(step){
-document.getElementById(step).style.visibility = 'visible';		
+function showStep(){
+	var sel = document.getElementById("cuisinename");
+	var name = sel.options[sel.selectedIndex].value;
+	var meals = document.getElementsByTagName("meal");
+	var visible = document.getElementsByClassName(name);
+	if (name == "All"){
+		visible = meals;
+	}
+	for (var i = 0; i < meals.length; i++) {
+		meals[i].style="display: none";
+	}
+	for (var i = 0; i < visible.length; i++) {
+		visible[i].style="";
+	}
+
 }
 
-
+function showmeal(){
+	var sel = document.getElementById("mealname");
+	var name = sel.options[sel.selectedIndex].value;
+	var meals = document.getElementsByTagName("meal");
+	var visible = document.getElementById(name);
+	for (var i = 0; i < meals.length; i++) {
+		meals[i].style="display: none";
+	}
+	visible.style="";
+}
