@@ -1,63 +1,68 @@
 <html>
 	<div class="row">
 		<h2>Ingredient Availability</h2>
+		<form action="report.php" method="post">
+			<div class="col-md-4">
+		        <select class ="form-control" onchange="showStep();" name="cuisinename" id="cuisinename">
+		            <option selected disabled>Select Cuisine</option>
+				  	<option value="Canadian">Canadian</option>
+	        		<option value="Italian">Italian</option>
+	        		<option value="Asian">Asian</option>
+			        <option value="European">European</option>
+			        <option value="Carribean">Carribean</option>
+			        <option value="Mexican">Mexican</option>
+			        <option value="African">African</option>
+			        <option value="Middle Eastern">Middle Eastern</option>
+				    <option value="All">All</option>
+				    <input type="hidden" id="hide" name="hide" value="high">
+		        </select>
+		        <select class ="form-control" onchange="showmeal();" name="mealname" id="mealname">
+		            <?php
+			            require('../connect.php');
+			            $setPath = pg_query("Set search_path='foobox';");
+			            $getIngredients = pg_query("select * from meals as meal where NOT EXISTS (select * from queue where mealsid= meal.id and completed=false) and active=true;");
+			            while($row = pg_fetch_array($getIngredients)){
+			              echo '<option class="op" value="'.$row["id"]. '"">'.$row["name"].'</option>';
+			            }
+			          ?>
+		        </select>	
+			</div>
+		</form>
+		<div class= "step2">
 		
-		<div class="col-md-4">
-	        <select class ="form-control" onchange="showStep('step2');" name="cuisinename" id="cuisinename">
-	            <option selected disabled>Select Cuisine</option>
-			  	<option value="Canadian">Canadian</option>
-        		<option value="Italian">Italian</option>
-        		<option value="Asian">Asian</option>
-		        <option value="European">European</option>
-		        <option value="Carribean">Carribean</option>
-		        <option value="Mexican">Mexican</option>
-		        <option value="African">African</option>
-		        <option value="Middle Eastern">Middle Eastern</option>
-			    <option value="All">All</option>
-	        </select>
-			
 		</div>
-		<div class="col-md-4 offset-md-4" id="step2" style="visibility: hidden;">
-	        <select class ="form-control" onchange="showStep('step3');" name="mealname" id="mealname">
-	          <option selected disabled>Select Meal</option>
-			  <?php
-			  	//$type = $_POST['cuisinename'];
-			  	echo $type;
-			  	require('../connect.php');
-			  	$query = 0;
-			  	if($type == "All"){
-			  		$query= pg_query("select id, name from meals;");
-			  	}else{
-			  		$query = pg_query("select id, name from meals where cuisine='$type';");
-			  	}
-			  	while($row = pg_fetch_row($query)){
-			  		echo '<option value="'.$row[0].'">'.$row[1].'</option>';
-			  	}
-			  ?>
-	        </select>
-		</div>		
 	</div>
 	<div class="row">
 		<hr/>
-			<div class="col-md-12" id="step3" style="visibility: hidden;">
-			<table class="table table-striped" style="width:100%;">
-			  <tr>
-			    <th>Ingredient</th>
-			    <th>Quantity</th> 
-			  </tr>
-			  <tr>
-			    <td>First ingredient</td>
-			    <td>1</td>
-			  </tr>
-			  <tr>
-			    <td>Second ingredient</td>
-			    <td>20</td>
-			  </tr>
-			  <tr>
-			    <td>Chicken</td>
-			    <td>Infinite</td>
-			  </tr>
-			</table>
-		</div>
+			
+			<?php 
+			 require('../connect.php');
+                $setPath = pg_query("Set search_path='foobox';");
+                //Grab all meals that are active
+                $getMeals = pg_query("Select name,id,cuisine from meals where active=true;");
+              while($row = pg_fetch_array($getMeals)){
+              	$result= pg_query("
+                            select numberofingredients, name
+                            from relations, ingredient
+                            where mealid= $row[1] and ingredient.id=ingredientid;
+                            ");
+				  echo "
+				  <meal class=".$row[2]." id=".$row[1]." style='visibility: visible;'>
+					<table class='table table-striped' style='width:100%;'>
+				  <h1>".$row[0]."</h1>
+				  <tr>
+				    <th>Ingredient</th>
+				    <th>Quantity</th> 
+				  </tr>";
+				  while($ings = pg_fetch_array($result)){
+				  echo "<tr>
+				    <td>".$ings[1]."</td>
+				    <td>".$ings[0]."</td>
+				  </tr>";
+				}
+				  echo "</table>
+				</meal>";
+			}
+			  ?>
 	</div>
 </html>
