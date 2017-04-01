@@ -23,4 +23,7 @@
             pg_query("update ingredient set count=$numIngredients where id=$row[0];");
         }
     }
+    $url = "chef.php?page=queue";
+    $_SESSION['complete']= 'true';
+    header("Location: $url");
 ?>
