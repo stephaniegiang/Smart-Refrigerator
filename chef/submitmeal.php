@@ -25,6 +25,26 @@
 		$ingredientID = $ingredientID[0];
 		$num = $listIngredients[$index];
 		pg_query("insert into relations values ($numberRelations, $mealID, $ingredientID, $num, true);");
+		
+		//check threshold for each ingredient and make order if it is below or equal to threshold
+		$priceOfIngredient = pg_fetch_row(pg_query("Select price from Ingredient where ID=$primaryKey;"));
+		$priceOfIngredient = $priceOfIngredient[0];
+		$priceOrder = $priceOfIngredient *10; 
+		
+		$threshold = pg_fetch_row(pg_query("Select threshold from Ingredient where ID=$primaryKey;"));
+		$threshold = $threshold [0]; 
+		
+		$ingredientCount = pg_fetch_row(pg_query("select count from ingredient where name='$name';"));
+		$ingredientCount = $ingredientCount[0];
+		
+		if($ingredientCount=<$threshold){	
+			//Add ingredient to the order
+			 $ordersID = pg_fetch_array(pg_query("select count(id) from orders;"));
+	         $ordersID = $ordersID[0] + 1;
+			 
+			 $result = pg_query("INSERT INTO orders values ($ordersID,$ingredientID,10,$priceOrder,false, false );");
+		}	
+		
 	}
 
 	$url = "chef.php?page=meal";
