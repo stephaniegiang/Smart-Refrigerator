@@ -24,6 +24,7 @@
         }
     }
     $url = "chef.php?page=queue";
+    include("../php_includes/session.php");
     $_SESSION['complete']= 'true';
     header("Location: $url");
 ?>

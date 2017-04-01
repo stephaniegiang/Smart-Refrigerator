@@ -21,6 +21,7 @@
 	}
 
 	$url = "chef.php?page=orderingredients";
+	include("../php_includes/session.php");
 	$_SESSION['complete']= 'true';
 	header("Location: $url");
 ?>

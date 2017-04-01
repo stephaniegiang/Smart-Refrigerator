@@ -48,6 +48,7 @@
 	}
 
 	$url = "chef.php?page=meal";
+	include("../php_includes/session.php");
 	$_SESSION['complete']= 'true';
 	header("Location: $url");
 ?>
