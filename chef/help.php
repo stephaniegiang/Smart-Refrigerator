@@ -43,6 +43,6 @@
 	<div class="head">
 		<h2>Meal Report</h2>
 		<p class="des">Here you can view report on existing meals</p>
-		<p class="des">All available ingredients and for meals are shown here</p>
+		<p class="des">All available ingredients for meals are shown here</p>
 	</div>
 </html>
