@@ -20,7 +20,7 @@
 		pg_query("insert into orders values ($numberOrder, $ingredientID, $num, $price, false, false);");
 	}
 
-	//$url = "chef.php?page=meal";
-	//$_SESSION['complete']= 'true';
-	//header("Location: $url");
+	$url = "chef.php?page=orderingredients";
+	$_SESSION['complete']= 'true';
+	header("Location: $url");
 ?>
