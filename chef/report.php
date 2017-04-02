@@ -53,12 +53,13 @@
 				  <tr>
 				    <th>Ingredient</th>
 				    <th>Quantity</th> 
+				    <th>Number of Ingredient</th>
 				  </tr>";
 				  while($ings = pg_fetch_array($result)){
-				  echo "<tr>
-				    <td>".$ings[1]."</td>
-				    <td>".$ings[0]."</td>
-				  </tr>";
+				  $name = $ings[1];
+				  $Availability= pg_fetch_array(pg_query("select count from ingredient where name='$name';"));
+				  $Availability = $Availability[0];
+					echo "<tr><td>".$ings[1]."</td><td>".$ings[0]."</td><td>".$Availability."</td></tr>";
 				}
 				  echo "</table>
 				</meal>";

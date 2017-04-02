@@ -2,6 +2,8 @@ body {
     padding-top: 90px;
 	background-color:#2E6171;
   	background: url("img/fr.jpg");
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
 }
 
 div.logo{
