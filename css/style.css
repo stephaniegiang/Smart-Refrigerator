@@ -7,7 +7,7 @@ body{
 }
 @media screen and (max-width: 720px) {
     body {
-        padding-top: 200px;
+        padding-top: 150px;
     }
 }
 #logout{
