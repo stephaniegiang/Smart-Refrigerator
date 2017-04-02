@@ -1,12 +1,21 @@
 body{
   background-color:#2E6171;
   background: url("../img/fr.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+@media screen and (max-width: 720px) {
+    body {
+        padding-top: 200px;
+    }
 }
 #logout{
 	background: #e3e3e3;
 	border-radius: 10px;
 	margin-bottom: 5px;
 	color: white;
+	margin-top: 10px;
 }
 /*help*/
 .des{
