@@ -7,7 +7,7 @@
       <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
-    <nav role="navigation" class="navbar navbar-default" style="color:#CACFD6;">
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top" style="color:#CACFD6;">
         <div class="container">
             <div class="navbar-header">
                 <p class="navbar-brand">Welcome, <?php echo $_SESSION['login_name']; ?></p>
