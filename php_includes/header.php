@@ -1,5 +1,5 @@
 <?php 
-	include('config.php');
+	require("../connect.php");
 	include('session.php');
 ?>
 <html>
