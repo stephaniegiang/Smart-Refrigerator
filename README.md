@@ -8,6 +8,4 @@ Created using:
 <li>Javascript</li>
 </ul>
 
-Team:<br>
-UI - Judah and Wes<br>
-Back End - Stephanie and Meina<br>
+Can be viewed live at: http://foobox.herokuapp.com
