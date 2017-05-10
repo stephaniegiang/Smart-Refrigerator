@@ -1,5 +1,5 @@
 # Foobox 
-CSI2132 Final Project (Winter 2017)
+CSI2132 Final Project (Winter 2017)</br>
 Web application that helps kitchen's keep track of their inventory, current orders, and statistics. </br>
 Can be viewed live at: http://foobox.herokuapp.com</br>
 
